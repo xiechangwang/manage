@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Button from './Admin';
 
 function App() {
   return (
     <div className="App">
-      123132213
+      <Button/>
     </div>
   );
 }
