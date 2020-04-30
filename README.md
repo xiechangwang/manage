@@ -66,3 +66,67 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+############################################################################
+1 、首先需要暴露webpack配置 npm run eject，这个时候就会生成config和script两个文件夹
+2、npm install less less-loader antd babel-plugin-import
+3、在config/webpack.config.js文件中添加如下代码
+
+    const cssRegex = /\.css$/;
+    const cssModuleRegex = /\.module\.css$/;
+
+    const sassRegex = /\.(scss|sass)$/;
+    const sassModuleRegex = /\.module\.(scss|sass)$/;
+
+    添加如下代码 照葫芦画瓢
+    const lessRegex = /\.less$/;   
+    const lessModuleRegex = /\.module\.less$/;
+
+    ###在module/rules下添加  注意层级，不要弄错
+            {
+              test: lessRegex,
+              exclude: lessModuleRegex,
+              use: getStyleLoaders(
+                  {
+                    importLoaders: 2,
+                    sourceMap: isEnvProduction && shouldUseSourceMap,
+                  },
+                  'less-loader'
+              ),
+              // Don't consider CSS imports dead code even if the
+              // containing package claims to have no side effects.
+              // Remove this when webpack adds a warning or an error for this.
+              // See https://github.com/webpack/webpack/issues/6571
+              sideEffects: true,
+            },
+            // Adds support for CSS Modules, but using SASS
+            // using the extension .module.scss or .module.sass
+            {
+              test: lessModuleRegex,
+              use: getStyleLoaders(
+                  {
+                    importLoaders: 2,
+                    sourceMap: isEnvProduction && shouldUseSourceMap,
+                    modules: true,
+                    getLocalIdent: getCSSModuleLocalIdent,
+                  },
+                  'less-loader'
+              ),
+            },
+
+4、在package.json中添加以下代码
+            "babel": {
+              "presets": [
+                "react-app"
+              ],
+              "plugins": [
+                [
+                  "import",
+                  {
+                    "libraryName": "antd",
+                    "style": "css"
+                  }
+                ]
+              ]
+            }
