@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
-import './style.css';
+import './style.less';
 
 class Footer extends Component{
   render(){
     return (
-      <div>
-        Footer
+      <div className="footer_main">
+        ------------------底部版权------------------------
       </div>
     )
   }

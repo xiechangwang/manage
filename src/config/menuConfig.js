@@ -44,19 +44,19 @@ export default [
   },
   {
     title:'城市管理',
-    key:'/admin/ueditor'
+    key:'/admin/ueditor1'
   },
   {
     title:'订单管理',
-    key:'/admin/ueditor'
+    key:'/admin/ueditor2'
   },
   {
     title:'员工管理',
-    key:'/admin/ueditor'
+    key:'/admin/ueditor3'
   },
   {
     title:'车辆地图',
-    key:'/admin/ueditor'
+    key:'/admin/ueditor4'
   },
   {
     title:'图标',
@@ -67,6 +67,6 @@ export default [
   },
   {
     title:'设置权限',
-    key:'/admin/icons',
+    key:'/admin/icons1',
   }
 ]

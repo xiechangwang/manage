@@ -1,9 +1,11 @@
 .header{
+	background-color: #fff;
   .header-top{
     height: 60px;
     line-height: 60px;
     padding: 0 20px;
     text-align: right;
+	border-bottom: 1px solid #1890ff;
     a{
       margin-left:40px;
     }
@@ -11,5 +13,26 @@
   .breadcrumb{
     height: 40px;
     line-height: 40px;
+	.breadcrumb-title{
+		position: relative;
+		text-align:center;
+		font-size: 18px;
+		&::after{
+			position: absolute;
+			content:"";
+			left: calc(50% - 12px);
+			bottom: -9px;
+			border-top: 9px solid #fff;
+			border-left: 12px solid transparent;
+			border-right: 12px solid transparent;
+			
+		}
+	}
+	.weather{
+		text-align: right;
+		.weather-detail{
+			margin-right: 20px;
+		}
+	}
   }
 }
