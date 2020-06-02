@@ -17,7 +17,23 @@ export default [
       },
       {
         title:'Loading',
-        key:'/admin/ui/loading'
+        key:'/admin/ui/loadings'
+      },
+      {
+        title:'Notification',
+        key:'/admin/ui/notifications'
+      },
+      {
+        title:'Message',
+        key:'/admin/ui/meaasges'
+      },
+      {
+        title:'Tabs',
+        key:'/admin/ui/tabs'
+      },
+      {
+        title:'Carousel',
+        key:'/admin/ui/carousel'
       }
     ]
   },
@@ -26,8 +42,8 @@ export default [
     key:'/admin/from',
     children:[
       {
-        title:'input',
-        key:'/admin/from/input'
+        title:'Logins',
+        key:'/admin/form/logins'
       }
     ]
   },
