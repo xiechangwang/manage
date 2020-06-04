@@ -16,6 +16,7 @@ export default class Modals extends React.Component{
     });
   }
   handleOk = (e) => {
+    // eslint-disable-next-line
     if(e == 'visible2'){
       this.setState({
         loading:true
