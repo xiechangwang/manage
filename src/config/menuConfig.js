@@ -51,7 +51,14 @@ export default [
     title:'表格',
     key:'/admin/table',
     children:[
-     
+      {
+        title:'tables',
+        key:'/admin/table/tables',
+      },
+      {
+        title:'resizables',
+        key:'/admin/table/resizables',
+      }
     ]
   },
   {

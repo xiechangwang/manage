@@ -27,6 +27,10 @@ import Carousels from './pages/ui/carousel';
 //login
 import Logins from './pages/form/login';
 
+//table
+import Tables from './pages/table';
+//Resizables
+import Resizables from './pages/table/resizable'
 
 //404
 import NoMatch from './pages/noMatch';
@@ -61,6 +65,8 @@ class IRouter extends Component{
 													<Route path="/admin/ui/meaasges" component={Meaasges}/>
 													<Route path="/admin/ui/tabs" component={Tabs}/>
 													<Route path="/admin/ui/carousel" component={Carousels}/>
+													<Route path="/admin/table/tables" component={Tables}/>
+													<Route path="/admin/table/resizables" component={Resizables}/>
 													{/* form */}
 													<Route path="/admin/form/logins" component={Logins}/>
 													{/* 404 */}

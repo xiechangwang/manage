@@ -19,13 +19,13 @@ class NavList extends Component {
       if(item.children){
         this.renderMenu(item.children);
         return(
-          <SubMenu title={item.title} key={item.key}>
+          <SubMenu title={item.title} key={item.key} style={{'textAlign':'left'}}>
             {this.renderMenu(item.children)}
           </SubMenu>
         )
       }
       return(
-      <Menu.Item key={item.key}>
+      <Menu.Item key={item.key} style={{'textAlign':'left'}}>
         <NavLink to={item.key}>
           {item.title}
         </NavLink>
